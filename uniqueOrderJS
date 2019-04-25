@@ -1,0 +1,21 @@
+let uniqueInOrder = (iterable) => {
+    if (typeof iterable == 'string'){ 
+      let arr =  iterable.split('');
+      let fArr = [];
+      for (let i = 0; i < arr.length; i++) {
+        if (arr[i] !== arr[i+1]) {
+          fArr.push(arr[i]);
+        }
+      }
+      return fArr;
+    } else if (typeof iterable == 'object') {
+      let finalArr = [];
+      for (let i = 0; i < iterable.length; i++) {
+        if (iterable[i] !== iterable[i+1]) {
+          finalArr.push(iterable[i]);
+        }
+      }
+      return finalArr;
+    }
+};
+
